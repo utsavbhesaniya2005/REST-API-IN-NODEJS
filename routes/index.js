@@ -1,7 +1,16 @@
 const express = require('express');
 const route = express.Router();
-const userRoute = require('./UserRoutes/index');
+const authRoute = require('./AuthRoutes/index');
+const adminRoute = require('./AdminRoutes/index');
+const managerRoute = require('./ManagerRoutes/managerRoutes');
 
-route.use('/user', userRoute);
+// Admin Routes
+route.use('/auth', authRoute);
+
+// Admin Routes
+route.use('/admin', adminRoute);
+
+// Manager Routes
+route.use('/manager', managerRoute);
 
 module.exports = route;
