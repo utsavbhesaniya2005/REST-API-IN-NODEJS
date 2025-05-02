@@ -15,7 +15,7 @@ const register = async (req, res) => {
 
     try {
 
-        const user = await UserModel.findOne({email});
+        const user = await UserModel.findOne({ email });
 
         if(user){
 
